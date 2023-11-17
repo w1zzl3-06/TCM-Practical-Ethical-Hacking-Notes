@@ -24,4 +24,4 @@ VMware: [https://www.vmware.com/products/workstation-player/workstation-player-
 
 VirtualBox: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-[Installing Kali Linux](2%20Setting%20Up%20Our%20Lab%203cbb14ff0ffa4171baf853d522d80b56/Installing%20Kali%20Linux%.md)
+[Installing Kali Linux](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/blob/main/2.%20Setting%20Up%20Our%20Lab/Installing%20Kali%20Linux.md)
