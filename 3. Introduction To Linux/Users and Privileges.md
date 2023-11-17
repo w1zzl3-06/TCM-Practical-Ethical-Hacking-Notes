@@ -54,5 +54,5 @@ Please note that some of these commands require administrative privileges, and c
 ### Resources
 
 User Permission Cheatsheet
+<img width="617" alt="chmod_numbers" src="https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/ea3733a4-a9d5-426c-8bea-ece4394cb4d2">
 
-![chmod_numbers.png](chmod_numbers.png)
