@@ -6,7 +6,7 @@ SSH, or Secure Shell, is a cryptographic network protocol that provides a secure
 
 The nmap scan shows that SSH is running on port 22. At the enumeration phase, the goal is to simply try and connect to it on that specific port to get information on what is running:
 
-![2023-12-08 15_02_00-Kali [Running] - Oracle VM VirtualBox.png](2023-12-08_15_02_00-Kali_Running_-_Oracle_VM_VirtualBox.png)
+![2023-12-08_15_02_00-Kali_Running_-_Oracle_VM_VirtualBox](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/4b6df50b-5ec9-4524-8457-ac66b5226fab)
 
 Unfortunately Kioptrix is an old machine and trying to connect the normal way gives us errors such as requiring a key-exchange method using `oKexAlgorithms=+`  and a host key using `-c`. Both these methods don’t seem to work. Luckily with a little bit of searching and help. Using the following syntax seemed to work:
 
