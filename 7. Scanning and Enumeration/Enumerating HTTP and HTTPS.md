@@ -61,7 +61,7 @@ Initially, the two most important ports are 80 and 443, both of them are open an
 
 With that in mind, let open up the IP address we scanned with nmap in the browser:
 
-![Kioptrix http page.png](Kioptrix_http_page.png)
+![Kioptrix_http_page](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/93b2f336-8422-4609-b77c-6623f24b804a)
 
 The default webpage does not give us a lot of information, but clicking on the links or using certain browser extensions like [Wappalyzer](https://www.wappalyzer.com/), it is possible to determine the server version (i.e 1.3.20 )and the OS the server is running on (UNIX). It is a good practice to note down such things in a text editor of your choice.
 
@@ -122,7 +122,7 @@ We can also use other tools like `gobuster` and `wfuzz` for directory brute-forc
 
 This tool can be run with a GUI using `dirbuster&` or through the shell `dirb {target ip}`. This example will use the GUI version:
 
-![dirbuster.png](dirbuster.png)
+![dirbuster](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/5ece3a9e-5b08-4e8d-adfc-945c7cae8411)
 
 1. Enter the target URL with the port number i.e 80
 2. Set the number of threads to determine the scan speed. The higher the number, the faster the scan. Or just select the **Go Faster** option.
