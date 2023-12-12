@@ -12,7 +12,7 @@ This VM can be installed on either Virtualbox/VMWare. The installation steps are
 - The username and password is `john:TwoCows2`
 - This is an old machine so the deafult commands for IP address discovery (i.e `ip a` and `ipconfig`) do not work. Use `ping` command instead.
 
-![Kioptrix ping.png](Kioptrix_ping.png)
+![Kioptrix_ping](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/a279d0eb-ac1c-4633-ae1f-c94bf3dc7199)
 
 In above screenshot, the ping command was used together with a random ip address. This allows our current machine to display it’s own IP address when sending packets to the target IP. Our machine’s IP address being 10.0.2.15 in this case.
 
