@@ -29,5 +29,5 @@ Pretty self explanatory. We can use a buffer overflow attack to gain access remo
 - Next up we have Samba 2.2.1a.
     - Google `samba 2.2.1a exploit` , this leads to multiple results but the most interesting is the [trans2open CVE:2003-020](https://www.exploit-db.com/exploits/7)1 written C which is can be exploited manually after getting a shell.
     - Another option is to launch metasploit via `msfconsole` and use the trans2open module with `use exploit/linux/samba/trans2open`:
-        
-        ![2023-12-11 14_30_14-Kali [Running] - Oracle VM VirtualBox.png](2023-12-11_14_30_14-Kali_Running_-_Oracle_VM_VirtualBox.png)
+
+        ![2023-12-11_14_30_14-Kali_Running_-_Oracle_VM_VirtualBox](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/bebf2542-7837-4f85-9c17-15a0b8f6ca66)
