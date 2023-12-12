@@ -14,17 +14,17 @@ We can enumerate SMB shares through a variety of ways, one of the go to methods 
 
 Launch metasploit through the `msfconsole` in the terminal and search for an smb scanner with `search auxilliary/scanner/smb_version`:
 
-![Kioptrix smb version smb.png](Kioptrix_smb_version_smb.png)
+![Kioptrix_smb_version_smb](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/0be0843f-5afa-4a1b-98aa-db225b615841)
 
 We’ve successfully obtained the Samba version which would be very useful later.
 
 Next, we can use `smbclient` to explore the shares present on the SMB server:
 
-![SMBclient.png](SMBclient.png)
+![SMBclient](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/3f0a1ed8-80f3-417d-8092-3cc7b1f01a87)
 
 Now to access the shares:
 
-![2023-12-08 14_37_48-Kali [Running] - Oracle VM VirtualBox.png](2023-12-08_14_37_48-Kali_Running_-_Oracle_VM_VirtualBox.png)
+![2023-12-08_14_37_48-Kali_Running_-_Oracle_VM_VirtualBox](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/0910f69c-ce40-47e3-b377-3afc326ade1e)
 
 **Question**: My enum4linux and/or smbclient are not working. I am receiving "Protocol negotiation failed: NT_STATUS_IO_TIMEOUT". How do I resolve?
 
