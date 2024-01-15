@@ -61,6 +61,8 @@ Nmap done: 1 IP address (1 host up) scanned in 170.09 seconds
 
 From the results, we can determine some things such as open ports, the OS and a few SMB shares.
 
+## Exploitation
+
 Let’s start with the OS by googling `Windows 7 Ultimate 7601 Service Pack 1 exploit`. From the results, we can tell that the main exploit for this particular OS is MS17-010  aka EternalBlue. 
 
 We’ll return to manual exploitation later. Lets see what we can find using Metasploit.
