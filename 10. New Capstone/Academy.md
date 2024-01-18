@@ -147,13 +147,13 @@ The website uses php so we can google for php reverse shell. Our first result wo
 
 All we need to do is change the following below to our Kali IP and a random port number:
 
-![2024-01-15 15_53_03-Kali [Running] - Oracle VM VirtualBox.png](Academy%207200b17c6043423e9c799a1a4b9cb534/2024-01-15_15_53_03-Kali_Running_-_Oracle_VM_VirtualBox.png)
+![2024-01-15_15_53_03-Kali_Running_-_Oracle_VM_VirtualBox](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/96bd0098-2bb2-49b9-8abf-13b68a3447f8)
 
 Once we’ve made the changes. Save and start a netcat listener with the port we specified in the reverse shell using the following command: `nc -nvlp 1234`.
 
 Go back to the profile page and upload our reverse shell:
 
-![revshell.png](Academy%207200b17c6043423e9c799a1a4b9cb534/revshell.png)
+![revshell](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/262aefde-4f50-4489-a4a7-ad32704d3e0b)
 
 Click `Update` , go back to our netcat listener and boom! We popped yet another shell!
 
@@ -224,13 +224,13 @@ $ ./linpeas.sh
 
 After a while, Linpeas will provide us with a lot of information. Feel free to go through it. But the most important things we can get out of the results are;
 
-![backup.sh.png](Academy%207200b17c6043423e9c799a1a4b9cb534/backup.sh.png)
+![backup sh](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/c2b600ef-2077-4780-8478-6bd99bed954c)
 
 Interesting…a `[backup.sh](http://backup.sh)` file is a win most of the time.
 
 And…
 
-![secure pass sql.png](Academy%207200b17c6043423e9c799a1a4b9cb534/secure_pass_sql.png)
+![secure_pass_sql](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/0406732d-338e-4b48-9aec-936f58da67b7)
 
 A password to a mysql database. We can copy the path and use the `cat` command to check for more info.
 
@@ -331,7 +331,7 @@ grimmie@academy:/tmp$ ./pspy64
 
 Wait for it to run till we see some information on `backup.sh`
 
-![grimmie process.png](Academy%207200b17c6043423e9c799a1a4b9cb534/grimmie_process.png)
+![grimmie_process](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/e08afd60-1c3e-46ee-b1d3-794c16ec938e)
 
 Looks like the `[backup.sh](http://backup.sh)` seems to be executing at one minute intervals.
 
