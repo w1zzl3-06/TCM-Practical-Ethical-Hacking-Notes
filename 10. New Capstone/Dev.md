@@ -64,13 +64,13 @@ Interesting ports are `80` , `8080`, and `2049` which contains an NFS, a network
 
 Go to the browser and enter `http://<MACHINE IP>:80` in the address bar.
 
-![bolt installation error.png](Dev%208bea62e077fb4263be464ee27d303148/bolt_installation_error.png)
+![bolt_installation_error](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/7f1c0e77-7705-44cf-b00b-e01204c5a8e7)
 
 Looks like we have an installation error. But now we know that we’re attacking a linux machine based on the current folder bolt is installed in `/var/www/html/`. Clicking on the documentation will reveal that Bolt is a CMS (content management system). 
 
 For port 8080:
 
-![php info.png](Dev%208bea62e077fb4263be464ee27d303148/php_info.png)
+![php_info](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/0cebf748-7bd5-4301-b1e6-36dee5f5b6e7)
 
 We have a php info page. This contains useful information such as the server path, webmaster and IP address just to name a few.  This page might lead to more information disclosure through exploitation.
 
@@ -174,7 +174,7 @@ Back to the `ffuf` results from earlier.
 
 From port 8080 there’s `/dev`. Accessing it from the browser reveals a Boltwire web application. 
 
-![Boltwire.png](Dev%208bea62e077fb4263be464ee27d303148/Boltwire.png)
+![Boltwire](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/31e045b5-9c94-44e4-bdeb-f648eeaaaefb)
 
 Let’s see if this webapp has any exploits. Thanks to Google, the app is susceptible to a [Local File Inclusion vulnerability](https://www.exploit-db.com/exploits/48411). 
 
@@ -182,7 +182,7 @@ We can also achieve the same result by using `searchsploit boltwire` in the term
 
 Basically, this exploit allows us to read the `etc/passwd` as an authenticated user. So all we need to do is go back to the boltwire page , create an account and reproduce the exploit as per the instructions and sure enough:
 
-![Boltwire passwd.png](Dev%208bea62e077fb4263be464ee27d303148/Boltwire_passwd.png)
+![Boltwire_passwd](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/8d0260a3-e788-4501-8a6e-2bf3e393f023)
 
 Looks like we have a `jeanpaul` user with the `/home/jeanpaul` directory. This might possibly be the user `jp` that previously tried to ssh into. We have a user name now. Time to find a password.
 
