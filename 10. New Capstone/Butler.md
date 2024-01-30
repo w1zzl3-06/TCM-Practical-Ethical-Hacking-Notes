@@ -49,7 +49,7 @@ So  A LOT of ports are open. Feel free to look through and see what each port do
 
 Accessing the first port leads us to a Jenkins login page. 
 
-![jenkins login.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/jenkins_login.png)
+![jenkins_login](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/8375f4cd-7151-4424-9e2f-043cb01593bd)
 
 Jenkins is an automation server that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration, and continuous delivery.
 
@@ -71,13 +71,13 @@ Start Burp Suite (make sure Foxy Proxy is enabled in the browser and the interce
 
 Go back to the jenkins login and type in anything and click sign in. Burp should capture the request:
 
-![burp jenkins.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/burp_jenkins.png)
+![burp_jenkins](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/68e82141-c4d6-4da5-8786-75776405228c)
 
 Right click on this and select `Send to intruder`. Now go to the intruder tab, then the positions sub-tab and click the `Clear`.
 
 Next highlight the following and click on `Add`.
 
-![burp intruder.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/burp_intruder.png)
+![burp_intruder](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/c499ea4d-db96-48b1-bf67-da6524f3488a)
 
 Under Choose attack type, select `Cluster bomb` from the drop down list.
 
@@ -85,27 +85,27 @@ Then go to the `Payloads` sub-tab. Here we will try to add a bunch of usernames 
 
 For Payload Set 1 (Usernames). Under Payload Settings (Simple List), Enter a username into the text box and click `Add`:
 
-![burp payload set 1.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/burp_payload_set_1.png)
+![burp_payload_set_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/03aa3443-4e22-4d0d-b00f-d1d25b89ad57)
 
 For Payload Set 2 (Passwords). We add the following passwords:
 
-![burp payload set 2.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/burp_payload_set_2.png)
+![burp_payload_set_2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/b1beef5b-a9b5-4518-98c1-bd4ca15f82fd)
 
 Click on `Start attack`
 
-![burp intruder result.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/burp_intruder_result.png)
+![burp_intruder_result](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/3710d937-b625-48d3-8a88-edff74f2788f)
 
 Make sure to check the length column in every line and compare to the other results. This will eventually lead us to a potential username and password i.e `jenkins:jenkins`
 
 Make sure Intercept is turned off in the Target tab and foxy proxy is disabled in your browser. Now lets try using the credentials on the login page.
 
-![Jenkins dashboard.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/Jenkins_dashboard.png)
+![Jenkins_dashboard](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/9dd95996-b8d6-4d1f-a754-b9dc52055cdf)
 
 It worked. Now that we are authenticated we can look up some ways to run code execution.
 
 On the Dashboard, click on `Manage Jenkins` then scroll down to `Tools & Actions` and select `Script Console` .
 
-![jenkins script console.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/jenkins_script_console.png)
+![jenkins_script_console](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/ab93803a-c190-4ca4-850e-3a237406183e)
 
 Looks like we can run groovy scripts on this page to get a reverse shell. Hop on google and look for `groovy reverse shell`. This should lead us to this [repo](https://gist.github.com/frohoff/fed1ffaab9b9beeb1c76). Copy the script and paste it into the script console.
 
@@ -247,7 +247,7 @@ There will be a lot of information to sift through. But the goal is to look for 
 
 Eventually we’ll find something related to the WiseCare365 application from earlier:
 
-![winpeas.png](Butler%20ef7a9df21ce048ae84027fd10668bb26/winpeas.png)
+![winpeas](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/c339b5c3-0aa3-421f-8fd4-92db69fbb8f4)
 
 This is an example of an unquoted service path. This is where you have a path to a service executable and the folder names along that path have spaces in them without quotations. This allows one to inject a malicious file within that path for the system to execute. Read more about the Unqouted Service Path vulnerability [here](https://www.ired.team/offensive-security/privilege-escalation/unquoted-service-paths).
 
