@@ -67,7 +67,7 @@ There’s a DNS pointer record for `blackpearl.tcm`
 
 We can add this to the `/etc/hosts` file using `nano /etc/hosts`.
 
-![etc hosts.png](Blackpearl%2001371c3f2f18483488d4ba43d9cd4ef9/etc_hosts.png)
+![etc_hosts](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/b253e818-eb0f-48bf-828d-ca2e96c692d8)
 
 `CTRL + X`  then `y` to save. Restart the browser and search for `http://blackpearl.tcm` 
 
@@ -77,7 +77,7 @@ Let’s use `ffuf`  to enumerate the host for any directories using `ffuf -w /us
 
 There’s another directory `/navigate`. Access it through the browser:
 
-![navigate login.png](Blackpearl%2001371c3f2f18483488d4ba43d9cd4ef9/navigate_login.png)
+![navigate_login](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/fe4a4241-2ed0-4746-8076-3ca979a4a339)
 
 We have a CMS login page. Time to google for exploits and/or default credentials.
 
@@ -189,7 +189,7 @@ Press ENTER. Give the file execute permissions with `chmod +x linpeas/sh` and ex
 
 Lots of information to go through. But what we are looking for this time is, this:
 
-![linpeas blackpearl.png](Blackpearl%2001371c3f2f18483488d4ba43d9cd4ef9/linpeas_blackpearl.png)
+![linpeas_blackpearl](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/e0ec501e-a907-406b-a341-336f0292245a)
 
 In nutshell, in the SUID persmission area. Whenever there's an `s` e.g `-rws`  , that means we can run whatever is tied to that permission as the user that owns it. So if we have a binary owned by root and it has the `s` permssion, we can run it as root.
 
@@ -218,7 +218,7 @@ find / -type f -perm -4000 2>/dev/null
 
 Access the website. Select `SUID`. We can start looking for binaries to exploit based on the list above. In this case, let’s look for php, select it and scroll down to SUID:
 
-![SUID.png](Blackpearl%2001371c3f2f18483488d4ba43d9cd4ef9/SUID.png)
+![SUID](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/ee0adc24-5c96-4ded-8f72-2b9ff9dceb24)
 
 Copy the highlighted line and paste it into the shell. Make sure to include the location of the binary first. like so:
 
