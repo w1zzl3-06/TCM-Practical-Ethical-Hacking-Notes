@@ -22,49 +22,20 @@ Here's a general overview of how Active Directory works:
 
 # Active Directory Components
 
-### **PHYSICAL COMPONENTS**
-
-| Domain Controller: A server with the AD DS server role installed that has been specifically been promoted to a domain controller | - Hosts a copy of the AD DS directory store. 
-- Provides authentication and authorization services.
-- Replicate updates to other domain controllers in the domain and forest.
-- Allow administrative access to manage user accounts and network resources. |
+| Physical Components | Description |
 | --- | --- |
-| Data Store: Contains the database files and processes that store and manage directory information for users, services, and applications. | - Consists of the Ntds.dit file.
-- Is stored by default in the %SystemRoot%\NTDS folder on all domain controllers.
-- Is accessible only through the domain controller processes and protocols. |
+| Domain Controller | A server with the AD DS server role installed that hosts a copy of the AD DS directory store, provides authentication and authorization services, replicates updates to other domain controllers, and allows administrative access to manage user accounts and network resources. |
+| Data Store | Contains the database files (Ntds.dit) and processes that store and manage directory information for users, services, and applications. It's stored in the %SystemRoot%\NTDS folder on all domain controllers and is accessible only through domain controller processes and protocols. |
 
-### **LOGICAL COMPONENTS**
-
-| AD DS Schema: Defines the structure and attributes of objects stored in the Active Directory database. | - Enforces rules regarding object creation and configuration. |
+| Logical Components | Description |
 | --- | --- |
-| Domains: Used to group and manage objects in an organisation. | - An administrative boundary for applying policies for group of objects.
-- A replication boundary for replicating data between domain controllers.
-- An authentication and authorization boundary that provides a way to limit the scope to access of resources. |
-| Trees: Hierarchy of domains in AD. | - Share contiguous namespace with the parent domain.
-- Can have additional child domains.
-- By default create two-way transitive trust with other domains |
-| Forests: A collection of one or more domain trees. | - Share a common schema.
-- Share a common configuration partition.
-- Share a common global catalog to enable searching.
--  Enable trusts between all domains in the forest.
-- Share the enterprise admins and schema admins group. |
-| Organizational Units (OUs): The Active Directory containers that can contain users, groups, computers, and other OUs | - Represent your organization hierarchically and logically.
-- Manage a collection of objects in a consistent way.
-- Delegate permissions to administer groups of objects.
-- Apply policies. |
-| Trusts: Trusts provide a mechanism for users to gain access to resources in another domain.
-
-Directional Trusts: The trust direction flows from trusting domain to the trusted domain.
-
-Transitive Trusts: The trust relationship is extended beyond a two-domain trust to include other trusted domains. | - All domains in a forest trust all other domains in the forest.
-- Trusts can extend outside the forest. |
-| Objects: These represent various entities such as users, groups, computers, organizational units (OUs), domains, and more. These objects are organized hierarchically within the directory structure and have attributes that define their properties. | - User: Enables network access for a user.
-- InetOrgPerson: Similar to a user account. Used for compatibility with other directory services.
-- Contacts: Used to primarily to assign e-mail addresses to external users. It does not enable network access.
-- Groups: Used to simplify the administration of access control.
-- Computers: Enables authentication and auditing of computer access to resources.
-- Printers: Used to simplify the process of locating and connecting to printers.
-- Shared folders: Enables users to search for shared folders based on properties. |
+| AD DS Schema | Defines the structure and attributes of objects stored in the Active Directory database, enforcing rules regarding object creation and configuration. |
+| Domains | Used to group and manage objects in an organization, serving as an administrative, replication, authentication, and authorization boundary. |
+| Trees | Hierarchies of domains in AD sharing a contiguous namespace with the parent domain and can have additional child domains, defaulting to two-way transitive trust with other domains. |
+| Forests | Collections of one or more domain trees sharing a common schema, configuration partition, global catalog, enabling trusts between all domains in the forest, and sharing enterprise admins and schema admins group. |
+| Organizational Units (OUs) | Active Directory containers that can contain users, groups, computers, and other OUs, representing the organization hierarchically and logically, managing a collection of objects consistently, delegating permissions, and applying policies. |
+| Trusts | Mechanisms providing access to resources in another domain, including directional trusts flowing from trusting to trusted domain and transitive trusts extending beyond two-domain trusts to include other trusted domains, with all domains in a forest trusting each other and the possibility of trusts extending outside the forest. |
+| Objects | Represent various entities such as users, groups, computers, organizational units (OUs), domains, and more, organized hierarchically within the directory structure, with specific attributes defining their properties, including user accounts enabling network access, contacts assigning e-mail addresses to external users, groups simplifying access control administration, computers enabling authentication and auditing, printers simplifying locating and connecting to printers, and shared folders enabling users to search based on properties. |
 
 Overall, Active Directory simplifies network management by centralizing directory information and providing a secure and scalable platform for authentication, authorization, and resource management in Windows-based environments.
 
