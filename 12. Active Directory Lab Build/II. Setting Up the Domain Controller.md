@@ -83,9 +83,8 @@ Wait for Windows to finish the setup.
 - Our default password should work as usual.
 - Time to add Certificate services (used to verify identities in a DC) by going to the Server Manager dashboard, `**Manage**` > `**Add Roles and Features**` > **Next** > `**Role-based or feature based installation**` > **Next > `Select a server from the server pool`** > **Next > Select `Active Directory Certificate Services` `Add features` > Next >** On the Features page click **Next** > **Next** again > On the **Select role services** page, make sure `Certification Authority` is selected > **Next > Select `Restart the destination server automatically if required` > Install.**
     
-    ![14.png](ii%20Setting%20Up%20the%20Domain%20Controller%20b28957af12df4daa9db7fe26e44601e8/14.png)
-    
-    ![15.png](ii%20Setting%20Up%20the%20Domain%20Controller%20b28957af12df4daa9db7fe26e44601e8/15.png)
+![14](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/ad47787d-68d5-4510-aaeb-5dedab9ae87a)
+![15](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/bb4e54ff-4c97-4d4f-8961-0dcd70b918f4)
     
 - Click **Next** till we reach the **Validity Period**  page, set it to **99** years.
 - Click **Next.** Then **Configure.**
