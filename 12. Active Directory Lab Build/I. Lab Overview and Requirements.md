@@ -1,4 +1,4 @@
-# i. Lab Overview and Requirements
+# I. Lab Overview and Requirements
 
 - 1 Windows Server + 2 Windows  10 Workstations
 - At least 40 GB free disk space
