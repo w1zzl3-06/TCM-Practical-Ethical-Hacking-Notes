@@ -5,7 +5,7 @@
 - Previously known as **NBT-NS** (NetBIOS Name Service)
 - Key flaw is that it utilizes a user’s username and NTLMv2 hash when appropriately responded to.
 
-![LLMNR Poisoning.png](I%20LLMNR%20Poisoning%2083121728af7e40f59905860e1a69ae42/LLMNR_Poisoning.png)
+![LLMNR_Poisoning](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/a793ee9b-b0d6-45e4-8898-f86a289a0143)
 
 ## How to perform LLMNR Poisoning?
 
