@@ -17,16 +17,16 @@ sudo responder -I eth0 -dwPv
 
 Press `ENTER` and take note of the Kali IP address.
 
-![Responder 1.png](II%20Capturing%20Hashes%20with%20Responder%2019a57c207a1a4d4d967545439f88028b/Responder_1.png)
+![Responder_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/86397ccb-e5c4-4e8d-9288-1a00efd3f3b1)
 
 Next boot up one Windows user machine.
 
 On the Windows machine, let’s simulate some traffic by going to file explorer and entering our Kali IP into the search bar.
 
-![Responder 2.png](II%20Capturing%20Hashes%20with%20Responder%2019a57c207a1a4d4d967545439f88028b/Responder_2.png)
+![Responder_2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/bb16cf67-1d75-4d92-9519-584e46b0461b)
 
 A login prompt should appear on the Windows machine. Now we go back to our Kali to check on Responder and there it is!! NTLM hashes for our Windows user.
 
-![Responder 3.png](II%20Capturing%20Hashes%20with%20Responder%2019a57c207a1a4d4d967545439f88028b/Responder_3.png)
+![Responder_3](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/f9386230-aff5-4479-9232-9c6b1f4ec0bf)
 
 Next up. We’ll attempt to crack the hashes.
