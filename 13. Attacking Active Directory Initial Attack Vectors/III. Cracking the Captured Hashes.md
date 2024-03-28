@@ -35,4 +35,5 @@ Ours is a NTLMv2 hash so the module number is 5600. So the command should be:
 
 If everything works well though, we should have our cracked password, `Password1`.
 
-![hahscat1.png](III%20Cracking%20the%20Captured%20Hashes%2066a4ef02229d4a869c8b2e3876da97e9/hahscat1.png)
+![hahscat1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/df77b642-dfda-44a6-9f1f-d46a51760423)
+
