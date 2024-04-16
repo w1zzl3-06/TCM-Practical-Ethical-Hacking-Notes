@@ -41,7 +41,7 @@ We still have some things to setup on these machines such as local administrator
 ![56](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/39c81db5-d8a3-4e00-875a-960dfb9eb882)
 ![57](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/0c518587-d898-4e0a-86a8-08580cd7bdab)
 
-Click on proceed and set a new password (To make it easy to remember, make it similar to the current user machine password.)
+Click on proceed and set a new password. MAKE SURE THIS PASSWORD IS THE SAME FOR BOTH MACHINES.
 
 Next double-click on the Administrator and untick `Account is disabled`. (For best practice, local admin accounts that are part of a Domain are usually disabled. But we have our reasons….).
 
