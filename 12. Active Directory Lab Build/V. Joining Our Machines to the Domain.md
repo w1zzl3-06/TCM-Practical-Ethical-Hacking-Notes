@@ -55,7 +55,7 @@ Remember the users we created when setting up our DC? We’re going to add them 
 
 ![60](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/33397b0c-2bf8-4cba-a2dc-882710239076)
 
-Make sure to click on Check Names to verify if the user exits. You can always go back to the DC machine and check. 
+Make sure to click on Check Names to verify if the user exits.
 
 Once that is done, OK then Apply. Next turn on Network discovery:
 
@@ -67,11 +67,11 @@ Our Domain Controller should appear:
 
 Now, let’s go to our second user machine and repeat the same process.
 
-Note that when we reach the part to create another local administrator, make sure to add the user from the previous machine as well as a different user. This will be used for an attack later on. So our list of local administrators on the second user machine should look like this:
+NOTE: For the local administrator, make sure to add the user from the previous machine as well as a different user i.e Both `FRANKY` and `USOPP` should be added. This will be used for an attack later on. So our list of local administrators on the second user machine should look like this:
 
-![63](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/03f4c594-dfb7-4233-ad2b-35e6a3be40c7)
+![DC NEW 2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/1061545e-b252-4dd9-964f-80b57d6ab743)
 
-Make sure to turn on Network Discovery. Now let’s log off and sign in as administrator (the initial user on this machine before joining the domain).
+Make sure to turn on Network Discovery. Now let’s log off and sign in as a local administrator.
 
 ![64](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/bb99e0a8-25be-432f-94b2-b9c14458a625)
 
