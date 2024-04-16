@@ -41,9 +41,11 @@ Add two low-level users by right clicking on the whitespace inside the `Users` f
 
 Give the user a name and password. Make sure to tick the “Password never expires” box. 
 
+NOTE: Make sure to add the `FRANKY` and `USOPP` users from the two user PCs as well. (Passwords should be the same as the ones on their respective machines).
+
 Once all accounts are setup. In the end, our `Users` group should look something like this:
 
-![25](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/c9a5b87a-e639-4af6-b317-8243cb451af1)
+![DC NEW 1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/f26de4a3-c3aa-40c9-b35c-65e9dd9fcfd2)
 
 Now, time to setup a file share which we will abuse later on by going to the left and side of the dashboard and choosing `File and Storage Services` > `Shares`>  `TASKS` > `New Share`.
 
