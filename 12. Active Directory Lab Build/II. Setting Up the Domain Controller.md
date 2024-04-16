@@ -49,18 +49,18 @@ Wait for Windows to finish the setup.
 
 ## Configuring the Domain Controller
 
-- Time to rename the domain controller. Go to the search bar and type “name” then `View your PC name` > `Rename this PC`. The PC name can be anything.
+- Time to rename the domain controller. Go to the search bar and type “name” then `View your PC name` > `Rename this PC`. The PC name can be anything. The PC name can be anything. (Mine is One Piece themed so my Domain Controller PC name is `STRAWHATS-PC`)
     
 ![7](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/bec45ff8-7786-46f8-ad28-fc9f5b61530f)
     
 - Restart the VM for the changes to take effect.
 - Now head over to the Server Manager Dashboard (It should always open on startup).
-- Let’s make this PC a Domain Controller by going to `**Manage**` > `**Add Roles and Features**` > **Next** > `**Role-based or feature based installation**` > **Next > `Select a server from the server pool`** > **Next > Select `Active Directory Domain Services` > `Add features` > Next > Next > Select `Restart the destination server automatically if required` > Install > After installation is done, select `Promote this server to a domain controller`.**
+- Let’s make `STRAWHATS-PC` a Domain Controller by going to `**Manage**` > `**Add Roles and Features**` > **Next** > `**Role-based or feature based installation**` > **Next > `Select a server from the server pool`** > **Next > Select `Active Directory Domain Services` > `Add features` > Next > Next > Select `Restart the destination server automatically if required` > Install > After installation is done, select `Promote this server to a domain controller`.**
     
 ![8](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/b417d8f3-5701-4893-9da6-18047ebebd1c)
 ![9](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/80c0eb59-d520-47aa-a898-0b891e347569)
 
-- We can name this whatever we want but make sure to add a .local at the end for good measure. Then click **Next.**
+- This can be named whatever the user likes (Mines `ONEPIECE.local` ofc), but we want to make sure to add a .local at the end for good measure. Then click **Next.**
 
 ![10](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/2327cdac-dbbf-474a-8a12-b9f0507b8eba)
   
