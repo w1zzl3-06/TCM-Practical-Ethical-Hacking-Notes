@@ -18,4 +18,4 @@ Turn off everything here, just in case and click `Accept`.
 
 Finally make sure to change the PC name and install the VBoxGuestAdditions package.
 
-NOTE: If there’s enough space and memory, we can set up another user machine exactly the same way using the same ISO file. If not, one user machine is okay.
+NOTE: For clarity, I named my Windows User PC 1 and User PC 2, `FRANKY` and `USOPP` respectively.
