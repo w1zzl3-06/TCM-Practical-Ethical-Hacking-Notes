@@ -71,18 +71,18 @@ Eventually, a bunch of stuff will start succeeding. This is a good sign.
 
 Checking the base folder and a `TheLoot` folder should appear. This folder contains all kinds of information such as all computers in the domain, users, groups etc.
 
-![Loot.png](IX%20IPv6%20Attack%20(DNS%20Takeover%20via%20mitm6)%2075662acc21da4fcfa15690f833eec67f/Loot.png)
+![Loot](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/dba6f9f0-cca0-434a-908b-d9e9525b6321)
 
 Next , login into the domain controller account on a windows user machine.
 
 Go back to the `ntlmrelayx` tab:
 
-![mitm6 new user.png](IX%20IPv6%20Attack%20(DNS%20Takeover%20via%20mitm6)%2075662acc21da4fcfa15690f833eec67f/mitm6_new_user.png)
+![mitm6_new_user](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/123b071b-d4d1-4412-831f-f0b2b48ca2b5)
 
 The tool has created a new user which can be used to access the domain controller account with elevated privileges. Pretty cool.
 
 We can verify this by logging into our domain controller and checking the `Users` folder in `Active Directory Users and Computers`.
 
-![mitm6 new user 1.png](IX%20IPv6%20Attack%20(DNS%20Takeover%20via%20mitm6)%2075662acc21da4fcfa15690f833eec67f/mitm6_new_user_1.png)
+![mitm6_new_user_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/211ea1fa-526b-4657-9756-06f908b2212e)
 
 Finally, we can run `secretsdump.py` to completely dump all the secrets of the Domain Controller, get the hashes and completely compromise it. This is pretty much game over.
