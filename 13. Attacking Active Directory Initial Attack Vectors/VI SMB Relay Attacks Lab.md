@@ -54,11 +54,11 @@ Next edit the responder file using:
 
 Make the following changes, `SMB = Off` , `HTTP = Off` and save.
 
-![SMB 1.png](VI%20SMB%20Relay%20Attacks%20Lab%209ab2956e38114b0aa98f7038ae5afff4/SMB_1.png)
+![SMB_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/58301229-a2ec-4433-8e42-78321fe7f4f2)
 
 Run responder with `sudo responder -I eth0 -dwPv`. Notice that HTTP Server and SMB Server are both off.
 
-![SMB 2.png](VI%20SMB%20Relay%20Attacks%20Lab%209ab2956e38114b0aa98f7038ae5afff4/SMB_2.png)
+![SMB_2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/1907a114-b902-4495-9b76-489e0d556c65)
 
 Open a new terminal tab and run `ntlmrelayx.py -tf targets.txt -smb2support`. If [pimpmykali](https://github.com/Dewalt-arch/pimpmykali) is not installed. Then ntlmrelay can be run with `impacket-ntlmrelayx` followed by the tags and conditions i.e `sudo impacket-ntlmrelayx -tf targets.txt -smb2support`. Leave it running.
 
@@ -66,7 +66,7 @@ Login to the windows machine that has a single local administrator, login using 
 
 Finally, back in the ntlmrelay terminal, the SAM hashes for the Admin and Local admin accounts will be dumped. It’s a good idea to save these in a text file for later.
 
-![SMB 3.png](VI%20SMB%20Relay%20Attacks%20Lab%209ab2956e38114b0aa98f7038ae5afff4/SMB_3.png)
+![SMB_3](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/91089df9-e721-4863-871e-e8befd459135)
 
 There’s also the option of using the  `-i` tag to spawn an interactive shell when an event is triggered i.e `sudo impacket-ntlmrelayx -tf targets.txt -smb2support -i`
 
