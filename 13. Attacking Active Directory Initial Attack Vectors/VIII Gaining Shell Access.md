@@ -183,7 +183,8 @@ These methods tend to be pretty noisy and can easily be detected if used in a re
     
     Copy the administrator hash from the SMB relay attack.
     
-    ![shell 1.png](VIII%20Gaining%20Shell%20Access%20c8ef47bc1b284eb6a4ef3f5ff1c2d540/shell_1.png)
+     ![shell_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/b07ee86c-88ce-4dc3-bc6d-9fcac43627fd)
+
     
     Use the following command `impacket-psexec USERNAME@IPADDRESS -hashes HASH`
     
