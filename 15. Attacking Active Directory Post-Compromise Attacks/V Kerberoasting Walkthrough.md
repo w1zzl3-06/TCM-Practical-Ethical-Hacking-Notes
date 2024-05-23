@@ -4,7 +4,7 @@ All we need for this attack is our Kali machine and DC machine as it is our KDC 
 
 Open the terminal and use the following command to grab the hash `python GetUserSPNs.py <DOMAIN/username:password> -dc-ip <ip of DC> -request` :
 
-![Uploading Kerberoasting_1.png…]()
+![Kerberoasting_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/fa3c2836-af37-4148-8330-c7254aedbc45)
 
 Next save the hash into a text file (i.e krb.txt)
 
