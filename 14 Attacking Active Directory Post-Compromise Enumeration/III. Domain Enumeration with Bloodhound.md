@@ -14,11 +14,11 @@ Next use the following command `sudo neo4j console` as it is required to run blo
 
 Clicking on the remote interface link will open the neo4j browser:
 
-![neo4j.png](III%20Domain%20Enumeration%20with%20Bloodhound%208fc830d8f04f4f6292da834cec11c2c4/neo4j.png)
+![neo4j](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/acea6152-b35f-48d8-9b69-43b664587016)
 
 On first use, use the following credentials to login `neo4j:neo4j`. We’ll be opted to change the credentials, please do and remember them.
 
-![neo4j 1.png](III%20Domain%20Enumeration%20with%20Bloodhound%208fc830d8f04f4f6292da834cec11c2c4/neo4j_1.png)
+![neo4j_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/eab2e8c6-3977-479b-90ed-c38273c11f06)
 
 Once that’s done, run bloodhound with `sudo bloodhound`
 
@@ -73,13 +73,13 @@ Back to the bloodhound folder we created and there’s a bunch of json files.
 
 Back to the bloodhound tool, upload the json files by clicking here, going to the bloodhound folder and highlighting everything.
 
-![bloodhound.png](III%20Domain%20Enumeration%20with%20Bloodhound%208fc830d8f04f4f6292da834cec11c2c4/bloodhound.png)
+![bloodhound](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/4a0a797b-399c-416a-824b-fc0894663787)
 
 Wait for it to finish uploading.
 
 Click on the drop down menu to the left and go to `Analysis`:
 
-![bloodhound 1.png](III%20Domain%20Enumeration%20with%20Bloodhound%208fc830d8f04f4f6292da834cec11c2c4/bloodhound_1.png)
+![bloodhound_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/530c838e-2e4a-49d9-8155-bc095ef345a7)
 
 Here we can click on the options such as `Find all Domain Admins` and we should have a nice graphical representation of it. We can click on the nodes in the graphic for even more information. 
 
