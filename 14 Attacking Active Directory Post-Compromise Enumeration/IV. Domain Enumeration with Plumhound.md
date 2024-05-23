@@ -24,7 +24,7 @@ sudo python3 PlumHound.py --easy -p <neo4j password >
 
 Run it and check if it is able to successfully retrieve info:
 
-![plumhound1.png](IV%20Domain%20Enumeration%20with%20Plumhound%204af81f7f6cbf46b2909b3b2600260f8b/plumhound1.png)
+![plumhound1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/e3916c3d-3ed6-49ce-b6e1-775a870e989b)
 
 Cool. Now time to run it for real to execute a default task (read more about this and other capabilities on the repo):
 
@@ -36,4 +36,5 @@ Run it. This will compress everything into a `Reports.zip` file in the `/reports
 
 Move into the `reports` directory and check the contents, there’s a bunch of files here with information similar to the ones we got from `ldapdomaindump` and Bloodhound. There’s an `index.html` file that can give a full report of everything contained in the directory. 
 
-![plumhound2.png](IV%20Domain%20Enumeration%20with%20Plumhound%204af81f7f6cbf46b2909b3b2600260f8b/plumhound2.png)
+![plumhound2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/e0af0cbb-ef1c-4390-bae0-3d378cf61051)
+
