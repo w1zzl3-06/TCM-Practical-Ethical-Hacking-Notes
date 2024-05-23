@@ -30,6 +30,6 @@ Use the `sekurlsa::` command to list out the attacks.
 
 Let’s try to list all available account credentials on the machine using `sekurlsa::logonPasswords`.
 
-![mimi 5.png](XI%20Credential%20Dumping%20with%20Mimikatz%20e382e964cf8e4b79a4b186735edb531f/mimi_5.png)
+![mimi_5](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/527eae73-43e0-4e75-9cf1-e9768fbbfcd2)
 
 This will return the NTLM hashes and plaintext password of the users and local admins.
