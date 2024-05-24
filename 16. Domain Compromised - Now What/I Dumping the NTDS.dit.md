@@ -67,13 +67,14 @@ To do this, all we need is the NT part (second half) of the hash.
 
 Before that, there’s a neat trick to order the NTDS.dit secrets by copying them, opening Excel, pasting them in the spreadsheet > `Data` > `Text to Columns` > `Delimited` > `Next` > `Select Other` > `Type : in the text box` > `Next` > `Finish`.
 
-![excel 1.png](I%20Dumping%20the%20NTDS%20dit%2038b453dab8b049fe86f5c2705cec4537/excel_1.png)
+![excel_1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/4aa413e4-5ca5-4d9d-a177-24a26b5b4c6f)
 
-![excel 2.png](I%20Dumping%20the%20NTDS%20dit%2038b453dab8b049fe86f5c2705cec4537/excel_2.png)
+![excel_2](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/50805def-9bd4-46ab-93d0-063afc0167a5)
 
-![excel 3.png](I%20Dumping%20the%20NTDS%20dit%2038b453dab8b049fe86f5c2705cec4537/excel_3.png)
+![excel_3](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/8d64b9e6-9c57-4e79-81c0-bb3386828416)
 
-![excel 4.png](I%20Dumping%20the%20NTDS%20dit%2038b453dab8b049fe86f5c2705cec4537/excel_4.png)
+![excel_4](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/b65c354f-4bb9-448f-8187-57f2edbd0945)
+
 
 Everything is nicely ordered.
 
@@ -83,4 +84,4 @@ Finally use hashcat to crack the hashes.
 
  `hashcat -m 1000 ntds.txt /usr/share/wordlists/rockyou.txt`
 
-![ntds1.png](I%20Dumping%20the%20NTDS%20dit%2038b453dab8b049fe86f5c2705cec4537/ntds1.png)
+![ntds1](https://github.com/w1zzl3-06/TCM-Practical-Ethical-Hacking-Notes/assets/141921425/8d2b3e2f-9e4d-46e8-b5a1-ff735f44c8a4)
